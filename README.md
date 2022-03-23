@@ -7,3 +7,4 @@ Desafio 1
 3. E exibe a soma entre os dois;
 
 Agora inclui o desafio número 2.
+Obs: Ver "Nesting templates" em https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation
