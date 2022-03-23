@@ -1,20 +1,36 @@
 // This code is rather verbose, but the objective is educational...
 function calcular(a:number,b:number):number{
-    return Math.sin(a)/Math.tanh(b)
+    return a + b
 }
 
-function mostrarSoma(){
+function mostrarResultadoCalculo(){
     let elemA:HTMLInputElement
     let elemB:HTMLInputElement
     elemA = <HTMLInputElement>document.getElementById("a")
     elemB = <HTMLInputElement>document.getElementById("b")
     let a = Number(elemA.value)
     let b = Number(elemB.value)
-    document.getElementById("saida").innerHTML = String(calcular(a,b))
+    document.getElementById("saida1").innerHTML = String(calcular(a,b))
 }
 
-document.getElementById("enter_button").addEventListener("click", mostrarSoma)
+document.getElementById("enter_button1").addEventListener("click", mostrarResultadoCalculo)
 
+// Re-usable template:
+const templateNumeroParaString = expressao => `O número digitado foi ${String(expressao)}.`;
+
+function mostrarConfere(){
+    // Variável tipada por annotation
+    let elemX:HTMLInputElement
+    // Typecasting
+    elemX = <HTMLInputElement>document.getElementById("x")
+    // Variável tipada por inferência
+    let x = Number(elemX.value)
+    // Valor tipado por conversão
+    // Observe o uso de "string interpolation"
+    document.getElementById("saida2").innerHTML = templateNumeroParaString(x)
+}
+
+document.getElementById("enter_button2").addEventListener("click", mostrarConfere)
 
 
 
